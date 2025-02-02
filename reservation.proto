@@ -1,3 +1,5 @@
+syntax = "proto3";
+
 service ReservationService {
     rpc CreateReservation (ReservationRequest) returns (ReservationResponse);
     rpc CancelReservation (CancelRequest) returns (ReservationResponse);
