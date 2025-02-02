@@ -1,7 +1,7 @@
 import grpc
 from concurrent import futures
-import reservation_pb2
-import reservation_pb2_grpc
+from generated import reservation_pb2
+from generated import reservation_pb2_grpc
 from .commands import CreateReservationCommand, CancelReservationCommand
 
 class ReservationService(reservation_pb2_grpc.ReservationServiceServicer):

@@ -1,6 +1,6 @@
 import grpc
-import notification_pb2
-import notification_pb2_grpc
+from generated import notification_pb2
+from generated import notification_pb2_grpc
 
 def send_notification(user_id, message):
     with grpc.insecure_channel('localhost:50056') as channel:

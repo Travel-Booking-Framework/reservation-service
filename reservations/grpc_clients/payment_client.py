@@ -1,6 +1,6 @@
 import grpc
-import payment_pb2
-import payment_pb2_grpc
+from generated import payment_pb2
+from generated import payment_pb2_grpc
 
 def process_payment(user_id, reservation_id):
     with grpc.insecure_channel('localhost:50055') as channel:

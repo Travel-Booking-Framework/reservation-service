@@ -1,6 +1,6 @@
 import grpc
-import flight_pb2
-import flight_pb2_grpc
+from generated import flight_pb2
+from generated import flight_pb2_grpc
 
 def book_flight(user_id, flight_id):
     with grpc.insecure_channel('localhost:50053') as channel:
