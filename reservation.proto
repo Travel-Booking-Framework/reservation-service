@@ -1,0 +1,19 @@
+service ReservationService {
+    rpc CreateReservation (ReservationRequest) returns (ReservationResponse);
+    rpc CancelReservation (CancelRequest) returns (ReservationResponse);
+}
+
+message ReservationRequest {
+    int32 user_id = 1;
+    string reservation_type = 2;
+    string reservation_id = 3;
+}
+
+message CancelRequest {
+    int32 reservation_id = 1;
+}
+
+message ReservationResponse {
+    int32 id = 1;
+    string status = 2;
+}
