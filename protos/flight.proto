@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service FlightService {
+    rpc BookFlight (FlightRequest) returns (FlightResponse);
+}
+
+message FlightRequest {
+    int32 user_id = 1;
+    string flight_id = 2;
+}
+
+message FlightResponse {
+    bool success = 1;
+    string message = 2;
+}
