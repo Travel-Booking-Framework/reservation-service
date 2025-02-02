@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service TrainService {
+    rpc BookTrain (TrainRequest) returns (TrainResponse);
+}
+
+message TrainRequest {
+    int32 user_id = 1;
+    string train_id = 2;
+}
+
+message TrainResponse {
+    bool success = 1;
+    string message = 2;
+}
