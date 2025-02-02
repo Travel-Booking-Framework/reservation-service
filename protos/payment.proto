@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service PaymentService {
+    rpc ProcessPayment (PaymentRequest) returns (PaymentResponse);
+}
+
+message PaymentRequest {
+    int32 user_id = 1;
+    string reservation_id = 2;
+}
+
+message PaymentResponse {
+    bool success = 1;
+    string message = 2;
+}
